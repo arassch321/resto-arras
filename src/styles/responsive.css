@@ -1,0 +1,72 @@
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media screen and (max-width: 769px) {
+    .hamberger {
+        display: block;
+    }
+    .hamberger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamberger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamberger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(24, 23, 23, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .headline__content {
+        margin: 0 auto;
+        max-width: 650px;
+    }
+    .post-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+    .post-item__title {
+        font-size: 18px;
+    }
+    .post-item__description {
+        font-size: 14px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .detail-review,
+    .card-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .card-detail .card-thumbnail img {
+        height: 500px;
+    }
+}
